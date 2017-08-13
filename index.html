@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Video Player</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+	<div class="video-container container">
+		
+		<video id="myVideo" controls preload="auto" poster="file:///C:/Users/ekene/Pictures/wallpapers/nice pix.jpg" width="100%" >
+			<source src="file://C:/Users/ekene/Videos/Amnesiac.2015.1080p.BluRay.x264.YIFY.mp4" type="video/mp4" />
+			<p>Your browser does not support the video tag.</p>
+		</video>
+		<div class="caption">Prometheus</div>
+		<div class="control">
+			<div class="progress seek" title="seek" style="height: 6px">
+				<div class="progress-bar time-lapse bg-primary" role="progressbar" style="width: 0%; padding: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+			</div>
+			<div class="btmControl row" style="margin:0px">
+				<div class="col-1 current">00:00</div>
+				<div class="btnPlay btn col-1" title="Play/Pause video"><span class="fa fa-play"></span></div>
+				<div class="volume-box col-6">
+					<div title="volume" class="progress volume">
+						<div class="progress-ba bg-success volume-bar" role="progressbar" style="width: 0%; padding: 0;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+						</div>
+					</div>
+				</div>
+				<div class="sound sound2 btn col-1" title="Mute/Unmute sound"><span class="mute fa fa-volume-up"></span></div>
+				 <div class="btnFS btn col-1 mr-1" title="Switch to full screen"><span class="fa fa-desktop"></span></div> 
+				<div class="col-1 video-length">--:--</div>
+				<!-- <div class="volume col-6" title="Set volume">
+					<span class="volumeBar"></span>
+				</div> -->
+			</div>
+			
+		</div>
+	</div>
+	<div class="import container mx-auto p-0 my-3">
+		<div class="row">
+			<div class="form-group col-md-2 col-sm-3 ">
+				<button class="btn btn-primary play-vid">Play a Video</button>
+				<input type="file" class="hidden-xs-up" multiple accept="video/mp4" name="" id="file-input">
+			</div>
+			<div class="col-md-10 col-sm-9" style="height: 6px;">
+				<div class="progress">
+					<div class="progress-bar bg-success upload-progress" style="width: 0%;padding: 0px;"></div>
+				</div>
+			</div>
+		</div>
+		<ul class="list-group">
+
+		</ul>
+	</div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
