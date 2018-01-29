@@ -245,22 +245,24 @@ $('.btnFS').on('click', function() {
         throw new Error("You should only add MP4 files");
         return;
       }
-      var reader = new FileReader()
-      reader.readAsDataURL(x)
-      reader.onprogress = updateUploadProgress
-      reader.onloadstart = function() { 
-        console.log("Loading..");
-        $("video")[0].src = "";
-      }
-      reader.onloadend = function() {
-        console.log("load end triggerd")
-      }
-      reader.onload = function(e) {
-        console.log("Loaded ", e.target.result.length)
-        $("video")[0].src = e.target.result
-        console.log("Finally")
-        $("video")[0].play()
-      }
+      videoUrl = window.URL.createObjectURL(x)
+      $("video")[0].src = videoUrl
+      // var reader = new FileReader()
+      // reader.readAsDataURL(x)
+      // reader.onprogress = updateUploadProgress
+      // reader.onloadstart = function() { 
+      //   console.log("Loading..");
+      //   $("video")[0].src = "";
+      // }
+      // reader.onloadend = function() {
+      //   console.log("load end triggerd")
+      // }
+      // reader.onload = function(e) {
+      //   console.log("Loaded ", e.target.result.length)
+      //   $("video")[0].src = e.target.result
+      //   console.log("Finally")
+      //   $("video")[0].play()
+      // }
       $(".caption").text(x.name)
       $("ul.list-group").append(`<li class="list-group-item"><a>${x.name}</a></li>`)
     }
